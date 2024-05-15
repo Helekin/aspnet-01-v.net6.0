@@ -1,9 +1,11 @@
-﻿@{
+﻿@model PersonModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">I'm Carlos Acuña</h1>
+    <h1 class="display-4">I'm @Model.Name - @Model.Age</h1>
     <h2>Full stack developer | AWS Expert</h2>
-    <img style="width: 200px; margin: 200 2rem 0; border-radius: 50%" src="~/img/Hellekin.png" alt="Hellekin" />
+    <img id="image" src="~/img/Hellekin.png" alt="Hellekin" />
 </div>
