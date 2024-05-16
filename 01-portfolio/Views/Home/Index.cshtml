@@ -1,11 +1,19 @@
-﻿@model PersonModel
+﻿@model HomeIndexViewModel
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">I'm @Model.Name - @Model.Age</h1>
-    <h2>Full stack developer | AWS Expert</h2>
-    <img id="image" src="~/img/Hellekin.png" alt="Hellekin" />
-</div>
+<partial name="_Introduction" />
+
+<partial name="_Skills" />
+
+@if(Model.Projects is not null){
+    <div class="text-center" style="padding-top: 6rem;">
+        <h1>My recents works</h1>
+        <p>Here you can see some of my works</p>
+    </div>
+    <div class="container">
+        
+    </div>
+}
