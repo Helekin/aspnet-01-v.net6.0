@@ -1,6 +1,4 @@
-﻿@model HomeIndexViewModel
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -8,12 +6,4 @@
 
 <partial name="_Skills" />
 
-@if(Model.Projects is not null){
-    <div class="text-center" style="padding-top: 6rem;">
-        <h1>My recents works</h1>
-        <p>Here you can see some of my works</p>
-    </div>
-    <div class="container">
-        
-    </div>
-}
+<partial name="_ProjectsSection" model="Model.Projects" />
