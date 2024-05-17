@@ -34,6 +34,23 @@ public class HomeController : Controller
         return View(projects);
     }
 
+    [HttpGet]
+    public IActionResult Contact()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Contact(ContactViewModel contactViewModel)
+    {
+        return RedirectToAction("Thankyou");
+    }
+
+    public IActionResult Thankyou()
+    {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
